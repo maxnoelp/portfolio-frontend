@@ -15,6 +15,7 @@
   --color-black: #000000;
   --color-white: #ffffff;
   --color-mix-1: linear-gradient(to right, #e81cff, #40c9ff);
+  --color-light-blue: #40c9ff;
 }
 
 body {
@@ -168,7 +169,7 @@ html {
 }
 
 .custom-link-dark:hover {
-  color: var(--color-white);
+  color: var(--color-mix-1);
   text-decoration: underline;
 }
 

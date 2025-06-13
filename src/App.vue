@@ -1,6 +1,6 @@
 <template>
   <div class="layout-wrapper">
-    <NavbarComp class="sticky-top" />
+    <NavbarComp />
 
     <main class="flex-grow">
       <RouterView />

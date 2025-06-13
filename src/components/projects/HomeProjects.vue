@@ -22,10 +22,10 @@
         <span class="name">{{ skill.name }}</span>
       </label>
     </div>
-    <div class="row row-cols-1">
-      <div class="col" v-for="project in filterProjects" :key="project.id">
-        <div class="card">
-          <img src="@/assets/images/Discord-Symbol.webp" alt="" class="img-fluid" />
+    <div class="row">
+      <div class="col-12 col-lg-6" v-for="project in filterProjects" :key="project.id">
+        <div class="card h-100">
+          <img :src="project.image" alt="" class="img-fluid w-100" style="max-height: 400px" />
           <div class="content">
             <p class="heading m-0">{{ project.title }}</p>
             <div class="d-flex flex-row gap-3">
@@ -118,7 +118,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 350px;
+  width: 100%;
   overflow: hidden;
   border-radius: 10px;
   background: var(--color-dark);
