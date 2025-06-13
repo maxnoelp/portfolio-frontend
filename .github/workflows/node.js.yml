@@ -3,8 +3,12 @@
 
 name: Node.js CI
 
-pull_request:
-    types: [opened, synchronize]
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
     branches: [master]
 
 jobs:
