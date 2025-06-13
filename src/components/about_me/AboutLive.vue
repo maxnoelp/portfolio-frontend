@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-dark m-0 py-5">
+  <div class="bg-black m-0 py-5">
     <div class="container text-white">
       <h2 class="mb-3">About Me</h2>
       <blockquote class="blockquote blockquote--classic">

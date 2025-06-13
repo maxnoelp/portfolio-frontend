@@ -1,42 +1,47 @@
 <template>
-  <div class="bg-dark">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-lg-2 py-5">
-        <div class="col text-prime mb-4 md-lg-0 d-flex flex-column justify-content-center">
-          <div>
-            <h1 clas="mb-3">Fullstack Entwickler und Problemlöser.</h1>
-            <p class="mb-3">
-              Ich entwickle sauberen, wartbaren Code mit modernen Technologien – für nachhaltige
-              Softwarelösungen.
-            </p>
-            <div class="d-flex gap-3">
-              <button class="btn-primary-me w-100"><span>Projekte</span></button>
-              <button class="btn-primary-me w-100"><span>Kontakt</span></button>
-            </div>
-          </div>
-        </div>
-        <div class="col text-white text-end">
-          <img src="@/assets/images/me.jpg" class="img-fluid rounded-3" alt="" />
-        </div>
+  <div class="bg-img-hero">
+    <div class="container h-100">
+      <div class="d-flex flex-column justify-content-end h-100">
+        <h1 class="text-prime">Fullstack Entwickler und Problemlöser.</h1>
+        <p class="d-flex flex-row mb-3 mb-lg-5 text-prime" v-html="randomText"></p>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      listText: [
+        "Refactor now. Ride for ruin and the world's ending!",
+        'For Gondor we deploy!',
+        'Speak, friend, and npm install.',
+        'The logs are lit! Rohan will debug!',
+        'Sam didn’t leave Frodo — and I won’t squash your commit.',
+      ],
+    }
+  },
+  computed: {
+    randomText() {
+      return this.listText[Math.floor(Math.random() * this.listText.length)]
+    },
+  },
+}
 </script>
 <style scoped>
+.bg-img-hero {
+  background-image: url('@/assets/images/backgorund-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
 h1 {
-  font-size: 4.2rem;
+  font-size: 2.75rem;
 }
 
-img {
-  max-height: 600px;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 3rem;
+@media (min-width: 768px) {
+  .bg-img-hero {
+    height: 600px;
   }
 }
 </style>
